@@ -158,10 +158,15 @@
                 <h4 class="text-2xl font-extrabold text-vastu-primary mb-5 border-b pb-3">
                     अपना व्यक्तिगत परामर्श निर्धारित करें (100% सटीकता के लिए)
                 </h4>
-                <form id="booking-form" class="space-y-6">
+                <!-- Web3Forms Integration -->
+                <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <!-- Web3Forms Access Key (MUST be kept hidden) -->
+                    <input type="hidden" name="access_key" value="e885ccc0-7a5d-4dcd-a953-752904f45c48">
+                    <input type="hidden" name="subject" value="Vastu Sadhna New Appointment Request">
+                    
                     <div>
                         <label for="name" class="block text-gray-700 font-medium mb-1">आपका पूरा नाम *</label>
-                        <input type="text" id="name" name="name" required
+                        <input type="text" id="name" name="नाम" required
                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary">
                     </div>
                     
@@ -169,44 +174,44 @@
                         <!-- जन्म तिथि -->
                         <div>
                             <label for="dob" class="block text-gray-700 font-medium mb-1">जन्म तिथि *</label>
-                            <input type="date" id="dob" name="dob" required
+                            <input type="date" id="dob" name="जन्म तिथि" required
                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary appearance-none bg-white">
                         </div>
                         
                         <!-- जन्म समय -->
                         <div>
                             <label for="tob" class="block text-gray-700 font-medium mb-1">जन्म समय *</label>
-                            <input type="time" id="tob" name="tob" required
+                            <input type="time" id="tob" name="जन्म समय" required
                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary appearance-none bg-white">
                         </div>
 
                         <!-- जन्म स्थान -->
                         <div class="md:col-span-1">
                             <label for="pob" class="block text-gray-700 font-medium mb-1">जन्म स्थान (शहर) *</label>
-                            <input type="text" id="pob" name="pob" placeholder="उदा. दिल्ली, भारत" required
+                            <input type="text" id="pob" name="जन्म स्थान" placeholder="उदा. दिल्ली, भारत" required
                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary">
                         </div>
                     </div>
 
                     <div>
                         <label for="email" class="block text-gray-700 font-medium mb-1">ईमेल पता (संपर्क के लिए) *</label>
-                        <input type="email" id="email" name="email" required
+                        <input type="email" id="email" name="ईमेल" required
                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary">
                     </div>
                     
                     <div>
                         <label for="consultation-type" class="block text-gray-700 font-medium mb-1">परामर्श प्रकार चुनें *</label>
-                        <select id="consultation-type" name="consultation-type" required
+                        <select id="consultation-type" name="परामर्श प्रकार" required
                                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary appearance-none bg-white">
                             <option value="">--- अपनी सेवा चुनें ---</option>
-                            <option value="basic">मूल फ़ोन नंबर + नाम विश्लेषण (30 मिनट) - ₹251</option>
-                            <option value="premium">गहन अंक ज्योतिष (फ़ोन + जन्म विवरण) विश्लेषण (60 मिनट) - ₹551</option>
-                            <option value="business">व्यावसायिक नाम/नंबर चयन और संरेखण (90 मिनट) - ₹1,001</option>
+                            <option value="मूल फ़ोन नंबर + नाम विश्लेषण (30 मिनट) - ₹251">मूल फ़ोन नंबर + नाम विश्लेषण (30 मिनट) - ₹251</option>
+                            <option value="गहन अंक ज्योतिष (फ़ोन + जन्म विवरण) विश्लेषण (60 मिनट) - ₹551">गहन अंक ज्योतिष (फ़ोन + जन्म विवरण) विश्लेषण (60 मिनट) - ₹551</option>
+                            <option value="व्यावसायिक नाम/नंबर चयन और संरेखण (90 मिनट) - ₹1,001">व्यावसायिक नाम/नंबर चयन और संरेखण (90 मिनट) - ₹1,001</option>
                         </select>
                     </div>
                     <div>
                         <label for="phone-to-analyze" class="block text-gray-700 font-medium mb-1">विश्लेषण के लिए फ़ोन नंबर * (10-अंकीय)</label>
-                        <input type="text" id="phone-to-analyze" name="phone-to-analyze" placeholder="वह नंबर जिसका विश्लेषण चाहते हैं" required maxlength="10"
+                        <input type="text" id="phone-to-analyze" name="विश्लेषण हेतु फ़ोन नंबर" placeholder="वह नंबर जिसका विश्लेषण चाहते हैं" required maxlength="10"
                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary">
                     </div>
                     
@@ -214,7 +219,7 @@
                             class="w-full bg-vastu-primary text-white font-extrabold py-3 rounded-lg shadow-xl shadow-vastu-glow hover:bg-teal-700 transition duration-300 transform hover:scale-[1.01]">
                         अपॉइंटमेंट अनुरोध भेजें और स्लॉट सुरक्षित करें
                     </button>
-                    <p id="booking-message" class="text-center text-sm text-vastu-primary font-semibold hidden"></p>
+                    <p id="booking-message" class="text-center text-sm font-semibold hidden"></p>
                 </form>
             </div>
 
@@ -397,57 +402,82 @@
         });
 
         // ------------------------------------
-        // 2. अपॉइंटमेंट बुकिंग तर्क (Appointment Booking Logic)
+        // 2. अपॉइंटमेंट बुकिंग तर्क (Appointment Booking Logic) - Web3Forms Integration
         // ------------------------------------
-        document.getElementById('booking-form').addEventListener('submit', (event) => {
+        document.getElementById('booking-form').addEventListener('submit', async (event) => {
             event.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const dob = document.getElementById('dob').value;
-            const tob = document.getElementById('tob').value;
-            const pob = document.getElementById('pob').value;
-            const consultationType = document.getElementById('consultation-type').options[document.getElementById('consultation-type').selectedIndex].text;
-            const phoneToAnalyze = document.getElementById('phone-to-analyze').value;
+            const form = event.target;
+            const formData = new FormData(form);
+            
             const submitButton = document.getElementById('submit-button');
             const bookingMessage = document.getElementById('booking-message');
 
-            // सभी अनिवार्य फ़ील्ड की जाँच
-            const isValidPhone = phoneToAnalyze.length === 10 && !isNaN(phoneToAnalyze);
+            // Collect data for success modal
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const consultationTypeElement = document.getElementById('consultation-type');
+            const consultationType = consultationTypeElement.options[consultationTypeElement.selectedIndex].text;
 
-            if (!name || !email || !dob || !tob || !pob || consultationType.includes('अपनी सेवा चुनें') || !isValidPhone) {
-                bookingMessage.textContent = 'कृपया (*) चिह्नित सभी अनिवार्य फ़ील्ड सही ढंग से भरें।';
-                bookingMessage.classList.remove('hidden');
-                bookingMessage.classList.remove('text-vastu-primary');
+            // Simple validation check (since HTML handles complex required fields)
+            const phoneToAnalyze = document.getElementById('phone-to-analyze').value;
+            const isValidPhone = phoneToAnalyze.length === 10 && !isNaN(phoneToAnalyze);
+            
+            if (!isValidPhone) {
+                bookingMessage.textContent = 'कृपया विश्लेषण के लिए 10-अंकीय फ़ोन नंबर सही ढंग से भरें।';
+                bookingMessage.classList.remove('hidden', 'text-vastu-primary');
                 bookingMessage.classList.add('text-red-600');
                 return;
             }
 
-            // बटन को अक्षम करें और लोडिंग स्थिति दिखाएं
+            // Disable button and show loading state
             submitButton.textContent = 'अनुरोध भेजा जा रहा है...';
             submitButton.disabled = true;
             submitButton.classList.add('opacity-70');
             bookingMessage.classList.add('hidden');
+            bookingMessage.classList.remove('text-red-600', 'text-vastu-primary');
 
-            // एपीआई कॉल विलंब का अनुकरण करें
-            setTimeout(() => {
-                // मॉडल सामग्री अद्यतन करें
-                document.getElementById('modal-message').innerHTML = `
-                    धन्यवाद, <span class="font-bold">${name}</span>! आपके <span class="font-bold">${consultationType}</span> परामर्श के लिए अनुरोध प्राप्त हो गया है। 
-                    हमारे आचार्य आपके विवरण के आधार पर गहन विश्लेषण शुरू करेंगे।
-                    <br><br>
-                    हम आपके दिनांक और समय को अंतिम रूप देने के लिए **24 घंटों के भीतर** <span class="font-bold text-vastu-primary">${email}</span> पर आपसे संपर्क करेंगे।
-                `;
+            try {
+                // Submit form data to Web3Forms
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                const json = await response.json();
 
-                // मॉडल दिखाएं
-                document.getElementById('success-modal').classList.remove('hidden');
-
-                // फॉर्म और बटन रीसेट करें
-                document.getElementById('booking-form').reset();
+                if (json.success) {
+                    // Success model update and display
+                    document.getElementById('modal-message').innerHTML = `
+                        धन्यवाद, <span class="font-bold">${name}</span>! आपके <span class="font-bold">${consultationType}</span> परामर्श के लिए अनुरोध प्राप्त हो गया है। 
+                        हमारे आचार्य आपके विवरण के आधार पर गहन विश्लेषण शुरू करेंगे।
+                        <br><br>
+                        हम आपके दिनांक और समय को अंतिम रूप देने के लिए **24 घंटों के भीतर** <span class="font-bold text-vastu-primary">${email}</span> पर आपसे संपर्क करेंगे।
+                    `;
+                    document.getElementById('success-modal').classList.remove('hidden');
+                    form.reset();
+                } else {
+                    // Handle Web3Forms error (e.g., failed key verification)
+                    const errorMessage = json.message || 'फ़ॉर्म सबमिशन में एक त्रुटि हुई। कृपया फिर से प्रयास करें या सीधे हमें ईमेल करें।';
+                    bookingMessage.textContent = errorMessage;
+                    bookingMessage.classList.remove('hidden');
+                    bookingMessage.classList.add('text-red-600');
+                }
+            } catch (error) {
+                // Handle network error
+                console.error('Submission Error:', error);
+                bookingMessage.textContent = 'नेटवर्क त्रुटि: कृपया सुनिश्चित करें कि आप इंटरनेट से जुड़े हैं और फिर से प्रयास करें।';
+                bookingMessage.classList.remove('hidden');
+                bookingMessage.classList.add('text-red-600');
+            } finally {
+                // Reset button state
                 submitButton.textContent = 'अपॉइंटमेंट अनुरोध भेजें और स्लॉट सुरक्षित करें';
                 submitButton.disabled = false;
                 submitButton.classList.remove('opacity-70');
-            }, 1500); // 1.5 सेकंड विलंब
+            }
         });
         
         // मॉडल बंद करने की कार्यक्षमता
