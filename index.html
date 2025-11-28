@@ -193,11 +193,14 @@
                         </div>
                     </div>
 
+                    <!--
+                    ईमेल पता फ़ील्ड को हटा दिया गया है
                     <div>
                         <label for="email" class="block text-gray-700 font-medium mb-1">ईमेल पता (संपर्क के लिए) *</label>
                         <input type="email" id="email" name="ईमेल" required
                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary">
                     </div>
+                    -->
                     
                     <div>
                         <label for="consultation-type" class="block text-gray-700 font-medium mb-1">परामर्श प्रकार चुनें *</label>
@@ -415,13 +418,15 @@
 
             // Collect data for success modal
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
             const consultationTypeElement = document.getElementById('consultation-type');
             const consultationType = consultationTypeElement.options[consultationTypeElement.selectedIndex].text;
 
             // Simple validation check (since HTML handles complex required fields)
             const phoneToAnalyze = document.getElementById('phone-to-analyze').value;
             const isValidPhone = phoneToAnalyze.length === 10 && !isNaN(phoneToAnalyze);
+            
+            // Collect the phone number used for analysis to be used as contact number in the modal
+            const contactPhone = phoneToAnalyze; 
             
             if (!isValidPhone) {
                 bookingMessage.textContent = 'कृपया विश्लेषण के लिए 10-अंकीय फ़ोन नंबर सही ढंग से भरें।';
@@ -455,7 +460,7 @@
                         धन्यवाद, <span class="font-bold">${name}</span>! आपके <span class="font-bold">${consultationType}</span> परामर्श के लिए अनुरोध प्राप्त हो गया है। 
                         हमारे आचार्य आपके विवरण के आधार पर गहन विश्लेषण शुरू करेंगे।
                         <br><br>
-                        हम आपके दिनांक और समय को अंतिम रूप देने के लिए **24 घंटों के भीतर** <span class="font-bold text-vastu-primary">${email}</span> पर आपसे संपर्क करेंगे।
+                        हम आपके दिनांक और समय को अंतिम रूप देने के लिए **24 घंटों के भीतर** <span class="font-bold text-vastu-primary">${contactPhone}</span> पर **कॉल/संदेश** द्वारा आपसे संपर्क करेंगे।
                     `;
                     document.getElementById('success-modal').classList.remove('hidden');
                     form.reset();
