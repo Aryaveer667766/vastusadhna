@@ -12,9 +12,11 @@
             font-family: 'Inter', sans-serif;
             background-color: #f7fafc; 
         }
-        .text-vastu-primary { color: #008080; } /* टील रंग */
+        /* वास्तु प्राइमरी (टील) */
+        .text-vastu-primary { color: #008080; } 
         .bg-vastu-primary { background-color: #008080; }
-        .border-vastu-accent { border-color: #f59e0b; } /* एम्बर एक्सेंट */
+        /* वास्तु एक्सेंट (एम्बर) */
+        .border-vastu-accent { border-color: #f59e0b; } 
         .shadow-vastu-glow { box-shadow: 0 0 15px rgba(0, 128, 128, 0.4); }
 
         /* सफलता मॉडल एनीमेशन */
@@ -24,6 +26,18 @@
         }
         .modal-content {
             animation: fadeInScale 0.3s ease-out forwards;
+        }
+
+        /* Select arrow customization */
+        .select-custom {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2310b981'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
         }
     </style>
 </head>
@@ -38,7 +52,8 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="text-gray-600 hover:text-vastu-primary transition duration-300 font-semibold">होम</a>
                 <a href="#acharya" class="text-gray-600 hover:text-vastu-primary transition duration-300 font-semibold">आचार्य</a>
-                <a href="#analysis" class="text-gray-600 hover:text-vastu-primary transition duration-300 font-semibold">विश्लेषण</a>
+                <a href="#services" class="text-gray-600 hover:text-vastu-primary transition duration-300 font-semibold">सेवाएं</a>
+                <a href="#faq" class="text-gray-600 hover:text-vastu-primary transition duration-300 font-semibold">FAQ</a>
                 <a href="#book" class="px-5 py-2 bg-vastu-primary text-white rounded-xl shadow-md hover:bg-teal-700 transition duration-300 font-bold">परामर्श बुक करें</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-vastu-primary focus:outline-none">
@@ -52,7 +67,9 @@
     <div id="mobile-menu" class="hidden bg-white shadow-lg md:hidden p-4 space-y-2">
         <a href="#home" class="block text-gray-700 hover:text-vastu-primary font-medium border-b pb-1">होम</a>
         <a href="#acharya" class="block text-gray-700 hover:text-vastu-primary font-medium border-b pb-1">हमारे आचार्य</a>
+        <a href="#services" class="block text-gray-700 hover:text-vastu-primary font-medium border-b pb-1">हमारी सेवाएं</a>
         <a href="#analysis" class="block text-gray-700 hover:text-vastu-primary font-medium border-b pb-1">त्वरित विश्लेषण</a>
+        <a href="#faq" class="block text-gray-700 hover:text-vastu-primary font-medium border-b pb-1">FAQ</a>
         <a href="#book" class="block text-vastu-primary font-medium pt-1">परामर्श बुक करें</a>
     </div>
 
@@ -108,14 +125,14 @@
                 <div class="flex flex-col md:flex-row items-center md:space-x-8">
                     <!-- आचार्य फोटो प्लेसहोल्डर -->
                     <div class="flex-shrink-0 mb-6 md:mb-0">
-                        <img src="https://5.imimg.com/data5/ANDROID/Default/2024/12/472730149/XK/ZL/PC/9932073/product-jpeg-500x500.jpg" alt="आचार्य जी की तस्वीर" class="rounded-full w-32 h-32 mx-auto object-cover ring-4 ring-vastu-primary/30">
+                        <img src="https://5.imimg.com/data5/ANDROID/Default/2024/12/472730149/XK/ZL/PC/9932073/product-jpeg-500x500.jpg alt="आचार्य जी की तस्वीर" class="rounded-full w-32 h-32 mx-auto object-cover ring-4 ring-vastu-primary/30">
                     </div>
                     <!-- आचार्य बायो -->
                     <div class="text-left">
                         <h4 class="text-3xl font-extrabold text-gray-900 mb-2">आचार्य श्री 'अंक-योगी'</h4>
                         <p class="text-vastu-primary font-semibold mb-4">वैदिक अंक ज्योतिष और वास्तु विशेषज्ञ (20+ वर्ष का अनुभव)</p>
                         <p class="text-gray-700">
-                            आचार्य श्री 'अंक-योगी' अंक ज्योतिष के गहन ज्ञान के साथ 20 वर्षों से अधिक का अनुभव रखते हैं। उनका विश्लेषण आपके जन्म विवरण (तारीख, समय, स्थान) और आपके वर्तमान नंबर की ऊर्जा के संरेखण पर आधारित होता है। उन्होंने हजारों जीवन में सकारात्मक परिवर्तन लाया है।
+                            आचार्य श्री 'अंक-योगी' अंक ज्योतिष के गहन ज्ञान के साथ 20 वर्षों से अधिक का अनुभव रखते हैं। उनका विश्लेषण आपके जन्म विवरण (तारीख, समय, स्थान) और आपके वर्तमान नंबर की ऊर्जा के संरेखण पर आधारित होता है। उन्होंने हजारों जीवन में सकारात्मक परिवर्तन लाया है और आपको धन, करियर और रिश्तों में सफलता के लिए सर्वोत्तम उपाय प्रदान करेंगे।
                         </p>
                     </div>
                 </div>
@@ -126,6 +143,68 @@
         </div>
     </section>
 
+    <!-- सेवाओं की तुलना सारणी (Service Comparison Table) -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl font-bold text-vastu-primary mb-4">
+                परामर्श सेवाओं की तुलना
+            </h3>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                अपनी आवश्यकतानुसार सर्वोत्तम पैकेज चुनें।
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <!-- पैकेज 1: मूल विश्लेषण -->
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl border-t-4 border-amber-500 transition duration-300">
+                    <span class="text-sm font-extrabold text-amber-600 bg-amber-100 px-3 py-1 rounded-full">प्रारंभिक</span>
+                    <h4 class="text-3xl font-extrabold text-gray-900 mt-2 mb-2">₹251</h4>
+                    <p class="text-lg font-semibold text-vastu-primary mb-4">मूल फ़ोन नंबर + नाम विश्लेषण</p>
+                    <p class="text-gray-600 mb-4">अवधि: 30 मिनट</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> फ़ोन नंबर का भाग्य अंक</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> नाम की कंपन ऊर्जा</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> एक क्षेत्र में सामान्य मार्गदर्शन (जैसे करियर या स्वास्थ्य)</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">&#x2716;</span> जन्म विवरण का उपयोग नहीं</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">&#x2716;</span> कोई रिकॉर्डिंग नहीं</li>
+                    </ul>
+                    <a href="#book" class="mt-6 block text-center bg-vastu-primary text-white font-bold py-2 rounded-lg hover:bg-teal-700">अभी बुक करें</a>
+                </div>
+                
+                <!-- पैकेज 2: गहन विश्लेषण (Recommended) -->
+                <div class="bg-white p-6 rounded-xl shadow-2xl ring-4 ring-amber-500 transition duration-300 transform scale-105">
+                    <span class="text-sm font-extrabold text-vastu-primary bg-teal-100 px-3 py-1 rounded-full">सर्वाधिक अनुशंसित</span>
+                    <h4 class="text-3xl font-extrabold text-gray-900 mt-2 mb-2">₹551</h4>
+                    <p class="text-lg font-semibold text-vastu-primary mb-4">गहन अंक ज्योतिष विश्लेषण</p>
+                    <p class="text-gray-600 mb-4">अवधि: 60 मिनट</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> **जन्म विवरण आधारित** सटीक विश्लेषण</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> आपके फ़ोन नंबर और जीवन पथ का संरेखण</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> विस्तृत करियर, धन और रिश्ते की भविष्यवाणी</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> **उपाय और रत्न** सुझाव</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> परामर्श की ऑडियो रिकॉर्डिंग</li>
+                    </ul>
+                    <a href="#book" class="mt-6 block text-center bg-amber-500 text-white font-extrabold py-3 rounded-lg shadow-lg hover:bg-amber-600 transform hover:scale-[1.02]">सर्वोत्तम मूल्य!</a>
+                </div>
+
+                <!-- पैकेज 3: व्यावसायिक चयन -->
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl border-t-4 border-amber-500 transition duration-300">
+                    <span class="text-sm font-extrabold text-amber-600 bg-amber-100 px-3 py-1 rounded-full">प्रीमियम</span>
+                    <h4 class="text-3xl font-extrabold text-gray-900 mt-2 mb-2">₹1,001</h4>
+                    <p class="text-lg font-semibold text-vastu-primary mb-4">व्यावसायिक नाम/नंबर चयन</p>
+                    <p class="text-gray-600 mb-4">अवधि: 90 मिनट</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> **सभी गहन विश्लेषण** सुविधाएँ शामिल</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> नए व्यवसाय/उत्पाद के लिए **नाम अंक ज्योतिष**</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> सर्वोत्तम कॉर्पोरेट फ़ोन/वाहन नंबर चयन</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> **साल भर** के मार्गदर्शन के लिए 1 अनुवर्ती कॉल</li>
+                        <li class="flex items-start"><span class="text-vastu-primary mr-2">&#x2713;</span> जीवनकाल सफलता चार्ट</li>
+                    </ul>
+                    <a href="#book" class="mt-6 block text-center bg-vastu-primary text-white font-bold py-2 rounded-lg hover:bg-teal-700">अभी बुक करें</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- त्वरित विश्लेषण और अपॉइंटमेंट बुकिंग फॉर्म -->
     <section id="analysis" class="py-20 bg-vastu-primary">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,6 +237,12 @@
                 <h4 class="text-2xl font-extrabold text-vastu-primary mb-5 border-b pb-3">
                     अपना व्यक्तिगत परामर्श निर्धारित करें (100% सटीकता के लिए)
                 </h4>
+                
+                <!-- Urgency Message -->
+                <div class="bg-red-50 border border-red-400 text-red-700 px-4 py-3 mb-6 rounded-lg font-bold text-center">
+                    आचार्य जी के लिए आज के केवल <span class="text-xl">4 स्लॉट</span> बचे हैं। अपनी जगह तुरंत सुरक्षित करें!
+                </div>
+                
                 <!-- Web3Forms Integration -->
                 <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                     <!-- Web3Forms Access Key (MUST be kept hidden) -->
@@ -193,19 +278,12 @@
                         </div>
                     </div>
 
-                    <!--
-                    ईमेल पता फ़ील्ड को हटा दिया गया है
-                    <div>
-                        <label for="email" class="block text-gray-700 font-medium mb-1">ईमेल पता (संपर्क के लिए) *</label>
-                        <input type="email" id="email" name="ईमेल" required
-                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary">
-                    </div>
-                    -->
+                    <!-- ईमेल फ़ील्ड हटा दिया गया है, केवल फ़ोन नंबर का उपयोग करें -->
                     
                     <div>
                         <label for="consultation-type" class="block text-gray-700 font-medium mb-1">परामर्श प्रकार चुनें *</label>
                         <select id="consultation-type" name="परामर्श प्रकार" required
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary appearance-none bg-white">
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary select-custom bg-white">
                             <option value="">--- अपनी सेवा चुनें ---</option>
                             <option value="मूल फ़ोन नंबर + नाम विश्लेषण (30 मिनट) - ₹251">मूल फ़ोन नंबर + नाम विश्लेषण (30 मिनट) - ₹251</option>
                             <option value="गहन अंक ज्योतिष (फ़ोन + जन्म विवरण) विश्लेषण (60 मिनट) - ₹551">गहन अंक ज्योतिष (फ़ोन + जन्म विवरण) विश्लेषण (60 मिनट) - ₹551</option>
@@ -213,11 +291,16 @@
                         </select>
                     </div>
                     <div>
-                        <label for="phone-to-analyze" class="block text-gray-700 font-medium mb-1">विश्लेषण के लिए फ़ोन नंबर * (10-अंकीय)</label>
-                        <input type="text" id="phone-to-analyze" name="विश्लेषण हेतु फ़ोन नंबर" placeholder="वह नंबर जिसका विश्लेषण चाहते हैं" required maxlength="10"
+                        <label for="phone-to-analyze" class="block text-gray-700 font-medium mb-1">विश्लेषण और संपर्क के लिए फ़ोन नंबर * (10-अंकीय)</label>
+                        <input type="text" id="phone-to-analyze" name="विश्लेषण हेतु फ़ोन नंबर" placeholder="वह नंबर जिसका विश्लेषण चाहते हैं / संपर्क नंबर" required maxlength="10"
                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-vastu-primary focus:border-vastu-primary">
                     </div>
                     
+                    <!-- Payment Clarification -->
+                    <div class="text-center text-sm font-semibold text-gray-700">
+                        <span class="text-amber-600 font-extrabold mr-1">&#9888;</span> महत्वपूर्ण: अनुरोध भेजने के बाद, हम आपसे **फ़ोन पर संपर्क** करके बुकिंग की पुष्टि करेंगे और **भुगतान** के लिए मार्गदर्शन करेंगे।
+                    </div>
+
                     <button type="submit" id="submit-button"
                             class="w-full bg-vastu-primary text-white font-extrabold py-3 rounded-lg shadow-xl shadow-vastu-glow hover:bg-teal-700 transition duration-300 transform hover:scale-[1.01]">
                         अपॉइंटमेंट अनुरोध भेजें और स्लॉट सुरक्षित करें
@@ -277,6 +360,88 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-vastu-primary text-center mb-12">
+                अक्सर पूछे जाने वाले प्रश्न (FAQ)
+            </h3>
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <details class="bg-gray-50 p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-bold text-lg text-gray-800 focus:outline-none">
+                        परामर्श की प्रक्रिया क्या है?
+                    </summary>
+                    <div class="pt-2 text-gray-600 border-t mt-2">
+                        आप फॉर्म भरते हैं, हम आपके विवरण की जांच करते हैं, और 24 घंटे के भीतर आचार्य जी आपके फ़ोन नंबर पर कॉल करके बुकिंग और भुगतान की पुष्टि करते हैं, जिसके बाद आपका सत्र निर्धारित होता है।
+                    </div>
+                </details>
+                <!-- FAQ 2 -->
+                <details class="bg-gray-50 p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-bold text-lg text-gray-800 focus:outline-none">
+                        क्या फ़ोन नंबर बदलना हमेशा ज़रूरी है?
+                    </summary>
+                    <div class="pt-2 text-gray-600 border-t mt-2">
+                        नहीं, आचार्य जी सबसे पहले आपके मौजूदा नंबर को अनुकूलित करने के लिए उपाय प्रदान करते हैं। यदि नंबर बदलना ही एकमात्र समाधान होगा, तभी इसकी सलाह दी जाती है।
+                    </div>
+                </details>
+                <!-- FAQ 3 -->
+                <details class="bg-gray-50 p-4 rounded-lg shadow cursor-pointer">
+                    <summary class="font-bold text-lg text-gray-800 focus:outline-none">
+                        आप जन्म समय और स्थान क्यों मांगते हैं?
+                    </summary>
+                    <div class="pt-2 text-gray-600 border-t mt-2">
+                        सटीक वैदिक अंक ज्योतिष विश्लेषण के लिए, आपके जीवन पथ को आपके फ़ोन नंबर की कंपन ऊर्जा के साथ संरेखित करना आवश्यक है। यह जानकारी विश्लेषण को 100% सटीक बनाती है।
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ज्ञान केंद्र (Knowledge Center/Blog Mock) - COMPLETE CONTENT -->
+    <section class="py-20 bg-vastu-primary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl font-bold text-vastu-primary mb-4">
+                ज्ञान केंद्र
+            </h3>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                अंक ज्योतिष और वास्तु के बारे में और जानें।
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- आर्टिकल 1: धन योग -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-vastu-primary text-left">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">
+                        आपके फ़ोन नंबर में छिपा 'धन योग'
+                    </h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        अंक ज्योतिष के अनुसार, कुछ अंक विशेष रूप से धन और समृद्धि को आकर्षित करते हैं। जैसे कि **नंबर 8** (शक्ति और बहुतायत का अंक), और **नंबर 6** (घरेलू स्थिरता और भौतिक सुख का अंक)। यदि आपका फ़ोन नंबर इन अंकों के साथ संरेखित होता है, तो यह आपके वित्तीय प्रवाह को बढ़ाता है। आचार्य जी यह निर्धारित कर सकते हैं कि ये अंक आपके व्यक्तिगत भाग्य अंक के साथ कैसे तालमेल बिठाते हैं।
+                    </p>
+                    <a href="#" class="text-vastu-primary font-semibold hover:underline">और पढ़ें &rarr;</a>
+                </div>
+                <!-- आर्टिकल 2: मास्टर नंबर्स -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-vastu-primary text-left">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">
+                        मास्टर नंबर्स (11, 22) का महत्व
+                    </h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        मास्टर नंबर्स (11 और 22) अंक ज्योतिष में अत्यधिक शक्तिशाली माने जाते हैं। **नंबर 11** अंतर्ज्ञान और आध्यात्मिक ज्ञान का प्रतीक है, जबकि **नंबर 22** बड़े पैमाने पर सफलता और भौतिक निर्माण (Master Builder) का प्रतीक है। यदि आपका फ़ोन नंबर इन ऊर्जाओं को वहन करता है, तो यह महान क्षमता का संकेत है, लेकिन यह चुनौतियों के साथ भी आता है जिसके लिए विशेषज्ञ मार्गदर्शन आवश्यक है।
+                    </p>
+                    <a href="#" class="text-vastu-primary font-semibold hover:underline">और पढ़ें &rarr;</a>
+                </div>
+                <!-- आर्टिकल 3: भाग्य अंक गणना -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-vastu-primary text-left">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">
+                        जन्म तिथि से अपने भाग्य अंक की गणना कैसे करें
+                    </h4>
+                    <p class="text-gray-600 text-sm mb-4">
+                        भाग्य अंक (Destiny Number) आपकी जन्म तिथि के सभी अंकों को एकल अंक (या मास्टर नंबर) में कम करके पाया जाता है। उदाहरण के लिए, यदि आपकी जन्म तिथि 15-08-1990 है, तो आप सभी अंकों (1+5+8+1+9+9+0) को जोड़ते हैं। यह आपका जीवन पथ दर्शाता है। आचार्य जी आपके नंबर को इस भाग्य अंक के साथ संरेखित करने में मदद करते हैं ताकि जीवन में संघर्ष कम हो।
+                    </p>
+                    <a href="#" class="text-vastu-primary font-semibold hover:underline">और पढ़ें &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- फुटर -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
@@ -293,17 +458,22 @@
                 </ul>
             </div>
             <div>
-                <h5 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-1">हमसे संपर्क करें</h5>
-                <p class="text-gray-400 text-sm">ईमेल: contact@vastusadhna.com</p>
-                <p class="text-gray-400 text-sm">समर्थन: +91-987-NUMERO</p>
+                <h5 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-1">कानूनी</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="text-gray-400 hover:text-vastu-primary transition">गोपनीयता नीति</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-vastu-primary transition">सेवा की शर्तें</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-vastu-primary transition">अस्वीकरण</a></li>
+                </ul>
             </div>
             <div>
-                <h5 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-1">अस्वीकरण</h5>
-                <p class="text-gray-500 text-xs">परामर्श केवल सूचनात्मक और आध्यात्मिक मार्गदर्शन उद्देश्यों के लिए हैं। वास्तु साधना पेशेवर सलाह का विकल्प नहीं है।</p>
+                <h5 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-1">हमसे संपर्क करें</h5>
+                <p class="text-gray-400 text-sm">ईमेल: vastusadhnaastrology@gmail.com</p>
+                <p class="text-gray-400 text-sm">समर्थन: +91-98351-80272</p>
             </div>
         </div>
         <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-500">
-            &copy; <span id="current-year"></span> वास्तु साधना। सभी अधिकार सुरक्षित।
+            &copy; <span id="current-year"></span> वास्तु साधना। सभी अधिकार सुरक्षित। <br>
+            <span class="text-gray-400 mt-1 block">निर्मित और प्रबंधित: Feasibility Media</span>
         </div>
     </footer>
 
