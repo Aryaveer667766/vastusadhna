@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ज्योतिषाचार्य नवीन मिश्रा | विशेषज्ञ अंकशास्त्री और लाइफ कोच</title>
+    <meta name="description" content="ज्योतिषाचार्य नवीन मिश्रा के साथ अपना भाग्य बदलें। अंक ज्योतिष, वास्तु और व्यक्तिगत मार्गदर्शन के विशेषज्ञ। परामर्श के लिए अभी व्हाट्सएप पर चैट करें या कॉल करें।">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --deep-purple: #2E1A47;
+            --mystic-purple: #4A2F68;
+        }
+        body {
+            font-family: 'Lato', 'Noto Serif Devanagari', sans-serif;
+            background-color: #fdfbf7;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Cinzel', 'Noto Serif Devanagari', serif;
+        }
+        .bg-mystic {
+            background: linear-gradient(135deg, #1a0b2e 0%, #2E1A47 100%);
+        }
+        .text-gold {
+            color: #d4af37;
+        }
+        .bg-gold {
+            background-color: #d4af37;
+        }
+        .border-gold {
+            border-color: #d4af37;
+        }
+        .star-pattern {
+            background-image: radial-gradient(white 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.1;
+        }
+        .floating-wa {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        /* Blur Effect CSS */
+        .blur-content {
+            filter: blur(6px);
+            user-select: none;
+            pointer-events: none;
+        }
+        .modal-open {
+            overflow: hidden;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased relative">
+
+    <!-- Sticky Header -->
+    <header class="fixed w-full z-40 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-mystic rounded-full flex items-center justify-center text-gold">
+                    <i data-lucide="moon-star"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-900 leading-none">नवीन मिश्रा</h1>
+                    <p class="text-xs text-gray-600 tracking-wider">वैदिक अंकशास्त्री</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex gap-8 font-medium text-gray-700">
+                <a href="#services" class="hover:text-purple-800 transition">सेवाएं</a>
+                <a href="#about" class="hover:text-purple-800 transition">परिचय</a>
+                <a href="#testimonials" class="hover:text-purple-800 transition">प्रशंसा</a>
+                <a href="#contact" class="hover:text-purple-800 transition">संपर्क</a>
+            </nav>
+
+            <a href="https://wa.me/919608299455?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%A8%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%88%E0%A4%82%20%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6%20%E0%A4%B2%E0%A5%87%E0%A4%A8%E0%A4%BE%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%82%E0%A4%82%E0%A5%A4" 
+               class="hidden md:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-bold transition shadow-md transform hover:scale-105">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>अभी चैट करें</span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-800" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-t md:hidden">
+            <div class="flex flex-col p-4 gap-4">
+                <a href="#services" class="text-lg font-medium text-center py-2" onclick="toggleMenu()">सेवाएं</a>
+                <a href="#about" class="text-lg font-medium text-center py-2" onclick="toggleMenu()">परिचय</a>
+                <a href="#testimonials" class="text-lg font-medium text-center py-2" onclick="toggleMenu()">प्रशंसा</a>
+                <a href="#contact" class="bg-mystic text-white text-center py-3 rounded-lg font-bold" onclick="toggleMenu()">परामर्श बुक करें</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-mystic overflow-hidden">
+        <div class="absolute inset-0 star-pattern"></div>
+        <!-- Decorative glowing orbs -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left text-white">
+                    <div class="inline-block px-4 py-1 border border-yellow-500/50 rounded-full bg-yellow-500/10 mb-6 backdrop-blur-sm">
+                        <span class="text-gold text-sm font-semibold tracking-wider">✨ #1 विश्वसनीय अंकशास्त्री</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        अंकों का सही मिलान,<br>
+                        <span class="text-gold">जीवन में नई उड़ान</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+                        करियर में रुकावट, रिश्तों में समस्या, या आर्थिक तनाव? नवीन मिश्रा से सटीक वैदिक उपाय और अंक ज्योतिष मार्गदर्शन प्राप्त करें।
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="tel:+919608299455" class="flex items-center justify-center gap-2 bg-white text-purple-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg transform hover:-translate-y-1">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            अभी कॉल करें
+                        </a>
+                        <a href="https://wa.me/919608299455?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%A8%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%88%E0%A4%82%20%E0%A4%85%E0%A4%AA%E0%A4%A8%E0%A5%87%20%E0%A4%AD%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%AF%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%A8%E0%A4%BE%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%82%E0%A4%82%E0%A5%A4" class="flex items-center justify-center gap-2 bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition shadow-lg transform hover:-translate-y-1">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            व्हाट्सएप चैट
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-400">
+                        <span class="text-green-400">●</span> अभी उपलब्ध • 100% निजी और गोपनीय
+                    </p>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <!-- Image Placeholder Frame -->
+                    <div class="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
+                        <div class="absolute inset-0 border-4 border-gold rounded-full animate-spin-slow" style="animation-duration: 20s; border-style: dashed;"></div>
+                        <div class="absolute inset-4 rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gray-200">
+                            <!-- Placeholder for Astrologer Image -->
+                            <img src="https://images.unsplash.com/photo-1583089892943-e02e5b017b6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Spiritual Divinity" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <!-- Floating Badges -->
+                        <div class="absolute top-0 left-0 bg-white p-3 rounded-xl shadow-xl flex items-center gap-2 animate-bounce" style="animation-duration: 3s;">
+                            <span class="text-yellow-500 text-2xl">★</span>
+                            <div>
+                                <p class="font-bold text-gray-900">15+ वर्ष</p>
+                                <p class="text-xs text-gray-500">अनुभव</p>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 right-0 bg-white p-3 rounded-xl shadow-xl flex items-center gap-2">
+                            <div class="bg-green-100 p-1 rounded-full text-green-600"><i data-lucide="users" class="w-4 h-4"></i></div>
+                            <div>
+                                <p class="font-bold text-gray-900">5000+</p>
+                                <p class="text-xs text-gray-500">खुश ग्राहक</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <div class="bg-white py-8 border-b">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-purple-700 mb-2"></i>
+                    <h3 class="font-bold">100% निजी</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-lucide="award" class="w-8 h-8 text-purple-700 mb-2"></i>
+                    <h3 class="font-bold">प्रमाणित विशेषज्ञ</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-lucide="zap" class="w-8 h-8 text-purple-700 mb-2"></i>
+                    <h3 class="font-bold">तत्काल उपाय</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-lucide="heart-handshake" class="w-8 h-8 text-purple-700 mb-2"></i>
+                    <h3 class="font-bold">विश्वसनीय सहयोग</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-purple-700 font-bold tracking-wider uppercase">मेरी विशेषज्ञता</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">फ्री कैलकुलेटर और सेवाएं</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1: Name Numerology -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 border border-transparent hover:border-gold group cursor-pointer" onclick="openModal('nameModal')">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-purple-700 group-hover:bg-purple-700 group-hover:text-white transition">
+                        <span class="text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">नाम अंक ज्योतिष (Name)</h3>
+                    <p class="text-gray-600 mb-6">क्या आपका नाम आपके भाग्य के साथ है? अपना नाम चेक करें और मुफ्त रिपोर्ट की झलक देखें।</p>
+                    <button class="text-purple-700 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        अभी चेक करें <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2: Mobile Numerology -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 border border-transparent hover:border-gold group relative overflow-hidden cursor-pointer" onclick="openModal('mobileModal')">
+                    <div class="absolute top-0 right-0 bg-gold text-xs font-bold px-3 py-1 rounded-bl-lg text-white">लोकप्रिय</div>
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-purple-700 group-hover:bg-purple-700 group-hover:text-white transition">
+                        <span class="text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">मोबाइल अंक ज्योतिष (Mobile)</h3>
+                    <p class="text-gray-600 mb-6">आपका नंबर धन ला रहा है या खर्च? अपना मोबाइल नंबर डालें और प्रभाव जानें।</p>
+                    <button class="text-purple-700 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        नंबर जांचें <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3: Relationship -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 border border-transparent hover:border-gold group cursor-pointer" onclick="openModal('loveModal')">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-purple-700 group-hover:bg-purple-700 group-hover:text-white transition">
+                        <span class="text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">लव कंपैटिबिलिटी (Love)</h3>
+                    <p class="text-gray-600 mb-6">क्या आप दोनों की जोड़ी स्वर्ग में बनी है? पार्टनर के साथ अनुकूलता स्कोर चेक करें।</p>
+                    <button class="text-purple-700 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        अनुकूलता देखें <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block border-2 border-purple-700 text-purple-700 font-bold px-8 py-3 rounded-full hover:bg-purple-700 hover:text-white transition">
+                    व्यक्तिगत परामर्श लें
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mystical Book" class="rounded-lg shadow-2xl rotate-2 hover:rotate-0 transition duration-500">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-purple-700 font-bold tracking-wider">नवीन मिश्रा के बारे में</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 text-gray-900">आपको आपके सच्चे भाग्य की ओर ले जाना</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        वैदिक ज्योतिष और चालिडियन अंक ज्योतिष में 15 से अधिक वर्षों के गहन शोध के साथ, मैंने हजारों लोगों को जीवन की उलझनों में स्पष्टता खोजने में मदद की है। मेरा मानना है कि अंक केवल संख्याएं नहीं हैं; वे आपकी आत्मा का खाका हैं।
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        मेरा दृष्टिकोण तार्किक, व्यावहारिक और समाधान-उन्मुख है। मैं केवल भविष्य नहीं बताता; मैं आपको सरल, प्रभावी उपायों के साथ इसे बनाने में मदद करता हूं जिनके लिए किसी महंगे अनुष्ठान की आवश्यकता नहीं होती है।
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-xl text-purple-800">15+</h4>
+                            <p class="text-sm text-gray-600">वर्ष अनुभव</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-bold text-xl text-purple-800">5k+</h4>
+                            <p class="text-sm text-gray-600">परामर्श</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919608299455?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%A8%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%88%E0%A4%82%20%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%80%20%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%E0%A4%93%E0%A4%82%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%A8%E0%A4%BE%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%82%E0%A4%82%E0%A5%A4" class="bg-purple-700 hover:bg-purple-800 text-white px-8 py-3 rounded-lg font-bold transition inline-flex items-center gap-2">
+                        मुझसे चैट करें <i data-lucide="message-square" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-mystic text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">मेरे ग्राहक क्या कहते हैं</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-200 mb-6 italic">"मैं 2 साल से अपने बिजनेस को लेकर परेशान था। नवीन जी ने मेरी कंपनी के लिए एक साधारण नाम परिवर्तन का सुझाव दिया, और 3 महीनों के भीतर, मैंने 200% वृद्धि देखी। वास्तव में जादुई!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold">R</div>
+                        <div>
+                            <p class="font-bold">राहुल शर्मा</p>
+                            <p class="text-xs text-gray-400">बिजनेस ओनर, दिल्ली</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-gold/30">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-200 mb-6 italic">"मुझे जो रिश्तों का मार्गदर्शन मिला, वह बिल्कुल सही था। उन्होंने समस्याओं की सटीक भविष्यवाणी की और ऐसे उपाय दिए जिन्होंने मेरी शादी बचा ली। अत्यधिक अनुशंसित।"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center font-bold">P</div>
+                        <div>
+                            <p class="font-bold">प्रिया सिंह</p>
+                            <p class="text-xs text-gray-400">गृहिणी, मुंबई</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-200 mb-6 italic">"नवीन मिश्रा सिर्फ एक ज्योतिषी नहीं बल्कि एक लाइफ कोच हैं। उनकी मोबाइल न्यूमेरोलॉजी सेवा ने मुझे नौकरी के बेहतर अवसर प्राप्त करने में मदद की।"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center font-bold">A</div>
+                        <div>
+                            <p class="font-bold">अमित वर्मा</p>
+                            <p class="text-xs text-gray-400">सॉफ्टवेयर इंजीनियर, बैंगलोर</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-purple-50 rounded-3xl p-8 md:p-12 shadow-xl text-center border border-purple-100">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">क्या आप अपना भाग्य बदलने के लिए तैयार हैं?</h2>
+                <p class="text-lg text-gray-600 mb-8">अनिश्चितता को अपने ऊपर हावी न होने दें। तत्काल उत्तर के लिए आज ही नवीन मिश्रा से जुड़ें।</p>
+                
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="https://wa.me/919608299455?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%A8%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%8F%E0%A4%95%20%E0%A4%85%E0%A4%AA%E0%A5%89%E0%A4%87%E0%A4%82%E0%A4%9F%E0%A4%AE%E0%A5%87%E0%A4%82%E0%A4%9F%20%E0%A4%AC%E0%A5%81%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4" 
+                       class="flex items-center justify-center gap-3 bg-green-500 text-white text-xl font-bold py-4 px-8 rounded-xl hover:bg-green-600 transition shadow-lg transform hover:-translate-y-1 w-full md:w-auto">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        <span>व्हाट्सएप करें</span>
+                    </a>
+                    
+                    <a href="tel:+919608299455" 
+                       class="flex items-center justify-center gap-3 bg-white text-gray-900 border-2 border-gray-200 text-xl font-bold py-4 px-8 rounded-xl hover:bg-gray-50 transition shadow-lg transform hover:-translate-y-1 w-full md:w-auto">
+                        <i data-lucide="phone" class="w-6 h-6 text-purple-700"></i>
+                        <span>कॉल करें +91 96082 99455</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 flex justify-center items-center gap-2 text-sm text-gray-500">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                    <span>आमतौर पर 15 मिनट के भीतर जवाब देते हैं</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-serif font-bold mb-4">नवीन मिश्रा</h3>
+                    <p class="text-sm">अंक ज्योतिष और ज्योतिष के प्राचीन विज्ञान के माध्यम से जीवन को सशक्त बनाना। आपकी सफलता बस एक गणना दूर है।</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">क्विक लिंक्स</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-gold transition">सेवाएं</a></li>
+                        <li><a href="#about" class="hover:text-gold transition">मेरे बारे में</a></li>
+                        <li><a href="#testimonials" class="hover:text-gold transition">प्रशंसापत्र</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition">संपर्क</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">संपर्क जानकारी</h3>
+                    <p class="text-sm mb-2"><i class="inline-block w-4 mr-2" data-lucide="phone"></i> +91 96082 99455</p>
+                    <p class="text-sm mb-2"><i class="inline-block w-4 mr-2" data-lucide="mail"></i> contact@navinmishra.com</p>
+                    <p class="text-sm"><i class="inline-block w-4 mr-2" data-lucide="map-pin"></i> मुंबई, भारत</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 ज्योतिषाचार्य नवीन मिश्रा। सर्वाधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Floating Action Buttons for Mobile -->
+    <div class="fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] p-3 md:hidden flex justify-between gap-3 z-40">
+        <a href="tel:+919608299455" class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-900 font-bold py-3 rounded-lg border border-gray-300">
+            <i data-lucide="phone" class="w-5 h-5"></i> कॉल
+        </a>
+        <a href="https://wa.me/919608299455?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%A8%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%8F%E0%A4%95%20%E0%A4%85%E0%A4%AA%E0%A5%89%E0%A4%87%E0%A4%82%E0%A4%9F%E0%A4%AE%E0%A5%87%E0%A4%82%E0%A4%9F%20%E0%A4%AC%E0%A5%81%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4" class="flex-1 flex items-center justify-center gap-2 bg-green-500 text-white font-bold py-3 rounded-lg shadow-lg">
+            <i data-lucide="message-circle" class="w-5 h-5"></i> चैट
+        </a>
+    </div>
+
+    <!-- Desktop Floating WhatsApp -->
+    <a href="https://wa.me/919608299455?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%A8%20%E0%A4%9C%E0%A5%80%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%AA%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%B0%E0%A5%8D%E0%A4%B6%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F" 
+       class="hidden md:flex fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 floating-wa hover:bg-green-600 transition items-center gap-2 group">
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap font-bold pl-2">नवीन जी से चैट करें</span>
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <!-- --- MODALS FOR CALCULATORS --- -->
+
+    <!-- Modal Backdrop -->
+    <div id="modalBackdrop" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center backdrop-blur-sm p-4">
+        
+        <!-- Name Numerology Modal -->
+        <div id="nameModal" class="bg-white rounded-2xl w-full max-w-md p-6 relative hidden shadow-2xl animate-fade-in-up">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-gray-500 hover:text-red-500"><i data-lucide="x"></i></button>
+            <h3 class="text-2xl font-bold text-purple-800 mb-4 text-center">नाम अंक ज्योतिष</h3>
+            
+            <form onsubmit="handleCalculation(event, 'name')" class="space-y-4" id="nameForm">
+                <div>
+                    <label class="block text-sm font-bold mb-1">पूरा नाम (Full Name)</label>
+                    <input type="text" id="nameInput" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none" placeholder="अपना नाम लिखें">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-1">जन्म तिथि (DOB)</label>
+                    <input type="date" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none">
+                </div>
+                <button type="submit" class="w-full bg-purple-700 text-white font-bold py-3 rounded-lg hover:bg-purple-800 transition">विश्लेषण करें (Analyze)</button>
+            </form>
+            <!-- Result Container -->
+            <div id="nameResult" class="hidden mt-6"></div>
+        </div>
+
+        <!-- Mobile Numerology Modal -->
+        <div id="mobileModal" class="bg-white rounded-2xl w-full max-w-md p-6 relative hidden shadow-2xl animate-fade-in-up">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-gray-500 hover:text-red-500"><i data-lucide="x"></i></button>
+            <h3 class="text-2xl font-bold text-purple-800 mb-4 text-center">मोबाइल अंक ज्योतिष</h3>
+            
+            <form onsubmit="handleCalculation(event, 'mobile')" class="space-y-4" id="mobileForm">
+                <div>
+                    <label class="block text-sm font-bold mb-1">मोबाइल नंबर</label>
+                    <input type="tel" id="mobileInput" required pattern="[0-9]{10}" class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none" placeholder="10 अंकों का मोबाइल नंबर">
+                </div>
+                <button type="submit" class="w-full bg-purple-700 text-white font-bold py-3 rounded-lg hover:bg-purple-800 transition">नंबर जांचें (Check)</button>
+            </form>
+            <!-- Result Container -->
+            <div id="mobileResult" class="hidden mt-6"></div>
+        </div>
+
+        <!-- Love Compatibility Modal -->
+        <div id="loveModal" class="bg-white rounded-2xl w-full max-w-md p-6 relative hidden shadow-2xl animate-fade-in-up">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-gray-500 hover:text-red-500"><i data-lucide="x"></i></button>
+            <h3 class="text-2xl font-bold text-purple-800 mb-4 text-center">लव कंपैटिबिलिटी</h3>
+            
+            <form onsubmit="handleCalculation(event, 'love')" class="space-y-4" id="loveForm">
+                <div>
+                    <label class="block text-sm font-bold mb-1">आपका नाम</label>
+                    <input type="text" id="loveName1" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none" placeholder="नाम">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-1">पार्टनर का नाम</label>
+                    <input type="text" id="loveName2" required class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none" placeholder="पार्टनर का नाम">
+                </div>
+                <button type="submit" class="w-full bg-pink-600 text-white font-bold py-3 rounded-lg hover:bg-pink-700 transition">स्कोर देखें (Check Score)</button>
+            </form>
+            <!-- Result Container -->
+            <div id="loveResult" class="hidden mt-6"></div>
+        </div>
+
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('py-3', 'py-2');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('py-2', 'py-3');
+            }
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- TEASER HIGHLIGHTS DATA ---
+        const highlightsData = {
+            name: [
+                "आपके नाम में 'राजयोग' के प्रबल संकेत हैं, लेकिन एक छोटी सी गलती इसे रोक रही है।",
+                "वर्तमान नाम की वर्तनी (Spelling) आपको कड़ी मेहनत के बाद भी पूरा फल नहीं दे रही है।",
+                "आपके नाम का पहला अक्षर आपके लिए बहुत भाग्यशाली है, लेकिन अंतिम अक्षर संघर्ष बढ़ा रहा है।",
+                "35 वर्ष की आयु के बाद आपके नाम के प्रभाव से अचानक धन लाभ के योग बन रहे हैं।",
+                "आपका नाम और आपकी जन्म तिथि आपस में मित्र नहीं हैं, जिससे मानसिक तनाव रहता है।",
+                "यह नाम आपको प्रसिद्धि दिला सकता है, लेकिन इसके लिए एक अंक को संतुलित करना होगा।",
+                "आपके नाम में छिपा 'Money Number' अभी सोयी हुई अवस्था में है, इसे जागृत करने की आवश्यकता है।"
+            ],
+            mobile: [
+                "आपका मोबाइल नंबर धन तो ला रहा है, लेकिन टिकने नहीं दे रहा है।",
+                "इस नंबर के अंतिम 3 अंक आपके वैवाहिक जीवन/रिश्तों में गलतफहमियां पैदा कर रहे हैं।",
+                "यह नंबर व्यापार और नेटवर्किंग के लिए बहुत शुभ है, लेकिन स्वास्थ्य के लिए भारी है।",
+                "आपके नंबर में 'शनि' का प्रभाव ज्यादा है, जिससे हर काम में देरी हो रही है।",
+                "यह नंबर आपको धोखेबाज दोस्तों और गलत संगत की ओर आकर्षित करता है।",
+                "आपके मोबाइल नंबर का कुल योग आपके भाग्यांक का शत्रु है, इसे बदलने की सलाह दी जाती है।",
+                "यह एक 'गोल्डन नंबर' साबित हो सकता है यदि आप इसमें एक छोटा सा बदलाव करें।"
+            ],
+            love: [
+                "आप दोनों का रिश्ता पिछले जन्म का है, लेकिन इस जन्म में 'अहंकार' बाधक बन सकता है।",
+                "अनुकूलता स्कोर बहुत अच्छा है, लेकिन परिवार की ओर से बाधाएं आने की संभावना है।",
+                "आपका पार्टनर आपसे बहुत प्यार करता है, लेकिन अपनी भावनाओं को व्यक्त नहीं कर पा रहा है।",
+                "अगले 6 महीने आपके रिश्ते के लिए बहुत संवेदनशील हैं, सावधानी बरतने की जरूरत है।",
+                "शादी के योग बहुत प्रबल हैं, लेकिन मंगल दोष के कारण छोटी-मोटी अड़चनें आ सकती हैं।",
+                "आप दोनों की मानसिक तरंगें (Vibrations) पूरी तरह से मेल नहीं खा रही हैं, उपाय की जरूरत है।",
+                "यह रिश्ता जुनून से भरा है, लेकिन स्थिरता (Stability) के लिए अंक ज्योतिष उपाय आवश्यक हैं।"
+            ]
+        };
+
+        // --- MODAL LOGIC ---
+
+        function openModal(modalId) {
+            document.getElementById('modalBackdrop').classList.remove('hidden');
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModals() {
+            document.getElementById('modalBackdrop').classList.add('hidden');
+            document.querySelectorAll('#modalBackdrop > div').forEach(div => div.classList.add('hidden'));
+            document.body.classList.remove('modal-open');
+            
+            // Reset Forms and Results
+            document.querySelectorAll('form').forEach(form => {
+                form.reset();
+                form.style.display = 'block';
+            });
+            document.querySelectorAll('[id$="Result"]').forEach(div => {
+                div.innerHTML = '';
+                div.classList.add('hidden');
+            });
+        }
+
+        function handleCalculation(event, type) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const resultDiv = document.getElementById(type + 'Result');
+            let inputData = "";
+
+            if(type === 'name') inputData = document.getElementById('nameInput').value;
+            if(type === 'mobile') inputData = document.getElementById('mobileInput').value;
+            if(type === 'love') inputData = `${document.getElementById('loveName1').value} और ${document.getElementById('loveName2').value}`;
+
+            // Show Loading
+            form.style.display = 'none';
+            resultDiv.classList.remove('hidden');
+            resultDiv.innerHTML = `
+                <div class="flex flex-col items-center justify-center py-8">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-700 mb-4"></div>
+                    <p class="text-purple-600 font-bold animate-pulse">ग्रहों की गणना हो रही है...</p>
+                    <p class="text-xs text-gray-400">कृपया प्रतीक्षा करें</p>
+                </div>
+            `;
+
+            // Simulate API Delay
+            setTimeout(() => {
+                // Get Random Highlight
+                const highlights = highlightsData[type];
+                const randomHighlight = highlights[Math.floor(Math.random() * highlights.length)];
+                
+                // Construct Whatsapp Message
+                let waMessage = "";
+                if(type === 'name') waMessage = `Namaste Navin ji, Maine website par Name Numerology check kiya. Mera naam ${inputData} hai. Mujhe full report chahiye.`;
+                if(type === 'mobile') waMessage = `Namaste Navin ji, Maine website par Mobile Numerology check kiya. Mera number ${inputData} hai. Mujhe iska asar janna hai.`;
+                if(type === 'love') waMessage = `Namaste Navin ji, Maine Love Compatibility check kiya. Names: ${inputData}. Hamein detailed matching karwani hai.`;
+
+                const waLink = `https://wa.me/919608299455?text=${encodeURIComponent(waMessage)}`;
+
+                resultDiv.innerHTML = `
+                    <div class="text-center animate-fade-in">
+                        <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mb-4 shadow-sm">
+                            <p class="text-xs text-purple-600 font-bold uppercase tracking-wider mb-1">ज्योतिषीय संकेत (Highlight)</p>
+                            <p class="text-lg font-bold text-gray-800 leading-snug">"${randomHighlight}"</p>
+                        </div>
+                        
+                        <div class="relative bg-white rounded-lg border border-gray-100 p-4 text-left shadow-inner">
+                            <div class="blur-content opacity-40">
+                                <h4 class="font-bold mb-2">विस्तृत विश्लेषण:</h4>
+                                <p class="text-sm mb-2">आपके मूलांक और भाग्यांक की गणना के अनुसार, आने वाला वर्ष आपके लिए बहुत महत्वपूर्ण मोड़ साबित होगा। ग्रहों की स्थिति बताती है कि...</p>
+                                <p class="text-sm mb-2">स्वास्थ्य के दृष्टिकोण से आपको सावधान रहने की आवश्यकता है। पेट और आंखों से संबंधित समस्याएं...</p>
+                                <p class="text-sm">उपाय: आपको प्रत्येक गुरुवार को यह विशेष कार्य करना चाहिए जिससे धन का प्रवाह...</p>
+                            </div>
+                            
+                            <div class="absolute inset-0 flex flex-col items-center justify-center bg-white/30 backdrop-blur-[2px] rounded-lg">
+                                <i data-lucide="lock" class="w-8 h-8 text-purple-700 mb-2"></i>
+                                <p class="text-sm font-bold text-gray-800 mb-3">पूरी रिपोर्ट लॉक है</p>
+                                <a href="${waLink}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transform hover:scale-105 transition flex items-center gap-2">
+                                    <i data-lucide="unlock" class="w-4 h-4"></i>
+                                    व्हाट्सएप पर अनलॉक करें
+                                </a>
+                                <p class="text-[10px] text-gray-500 mt-2">100% सटीक विश्लेषण के लिए संपर्क करें</p>
+                            </div>
+                        </div>
+                        
+                        <button onclick="closeModals()" class="mt-4 text-sm text-gray-500 hover:text-gray-800 underline">बंद करें</button>
+                    </div>
+                `;
+                lucide.createIcons(); // Re-init icons for the new content
+            }, 2500); // 2.5 seconds delay
+        }
+
+        // Close modal if clicked outside
+        document.getElementById('modalBackdrop').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModals();
+            }
+        });
+
+    </script>
+</body>
+</html>
